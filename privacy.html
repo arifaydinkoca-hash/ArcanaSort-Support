@@ -10,15 +10,17 @@
 <h1>Arcana Sort Privacy Policy</h1>
 <p>Last updated: October 16, 2026</p>
 
-<p>Arcana Sort does not require an account. Core game progress, settings, rewards, and other gameplay state are stored locally on the device so the game can resume and remember player preferences.</p>
+<p>Arcana Sort does not require an Arcana Sort account. Core game progress, settings, rewards, earned currency, collection state, and other gameplay state are stored locally on the device so the game can resume and remember player preferences.</p>
 
 <h2>Advertising and consent</h2>
-<p>Arcana Sort includes the Google Mobile Ads SDK for optional rewarded advertisements and interstitial advertisements. Editor and development builds use Google's official test ad units. Non-development iOS and TestFlight release candidates use the publisher-configured production ad units so release behavior matches production, subject to Google consent and iOS platform requirements.</p>
-<p>Before requesting ads, the app uses Google's User Messaging Platform consent flow where required. The app only requests ads when the Google consent SDK reports that ads may be requested. A privacy-options entry is available in the app when the consent SDK reports that privacy options are required.</p>
-<p>Google Mobile Ads may process technical device, app, consent, and advertising-delivery information according to Google's own policies and the consent choices available to the player. Arcana Sort does not directly implement its own cross-app tracking logic.</p>
+<p>Arcana Sort includes Google Mobile Ads for optional rewarded advertisements and interstitial advertisements. Before requesting ads, the app uses Google's User Messaging Platform consent flow where required. The app requests ads only when the Google consent SDK reports that ads may be requested. A privacy-options entry is available in the app when the consent SDK reports that privacy options are required.</p>
+<p>Google Mobile Ads may process technical device, app, consent, and advertising-delivery information according to Google's policies and the choices available to the player. Advertising consent is separate from the Analytics setting described below.</p>
 
-<h2>Analytics</h2>
-<p>Arcana Sort does not currently send gameplay analytics events to a separate analytics provider. Gameplay analytics hooks in the current build use a local/no-op implementation.</p>
+<h2>Optional analytics</h2>
+<p>Build 13 includes Unity Analytics 6.3.0 for optional gameplay analytics. Analytics is off by default. Players can enable or disable Analytics in Settings, and existing players are not automatically opted in when the feature is added.</p>
+<p>When Analytics is enabled, Arcana Sort may record gameplay and economy events such as level starts and completions, move counts, helper use, earned and spent in-game currency, purchase success or failure status, advertising presentation events, and collection or world reward progress.</p>
+<p>Unity Analytics also processes SDK-level technical and usage information as described by Unity's privacy documentation and the privacy manifest shipped with the Unity Analytics SDK. Gameplay, saves, rewards, and purchases do not depend on analytics delivery; if Analytics is disabled or unavailable, the game continues normally.</p>
+<p>Revoking Analytics in Settings stops optional analytics collection through the app's Unity Analytics integration. The integration also supports a provider data-deletion request. For assistance with a deletion request, use the support contact below.</p>
 
 <h2>Purchases</h2>
 <p>In-app purchases are processed by Apple through the App Store and StoreKit / Unity IAP. Arcana Sort does not receive the user's full payment card information. The app may receive verified purchase status and transaction information from Apple so it can unlock purchased features, prevent duplicate fulfillment, and restore purchases.</p>
@@ -27,7 +29,8 @@
 <p>Local data can include level progress, game settings, earned rewards, purchase-entitlement state, and other gameplay state. This data remains on the device until the app data is removed or the application is uninstalled, subject to platform backup behavior.</p>
 
 <h2>Tracking and privacy choices</h2>
-<p>The current Build 13 beta does not itself implement an App Tracking Transparency request or directly access the advertising identifier for cross-app tracking. Advertising availability and consent choices are handled through the Google Mobile Ads / UMP privacy flow and iOS platform behavior. If the shipping configuration changes to use tracking as defined by Apple, this policy and the app's permission flow will be updated before that configuration is released.</p>
+<p>Advertising privacy choices and Analytics consent are separate controls. Analytics consent does not grant permission for cross-company tracking.</p>
+<p>If a shipping advertising or analytics configuration performs tracking as Apple defines it or requires access to an identifier that needs App Tracking Transparency permission, Arcana Sort must request the applicable Apple permission before that tracking occurs. The App Store privacy disclosures are maintained to reflect the third-party SDKs included in the shipping build.</p>
 
 <h2>Children</h2>
 <p>Arcana Sort is intended for a general audience and is not specifically directed to children. The game does not require a user account or ask players to submit personal profile information.</p>
@@ -36,13 +39,14 @@
 <ul>
 <li>Apple App Store / StoreKit / Unity IAP — purchase processing and restoration</li>
 <li>Google Mobile Ads / User Messaging Platform — advertising delivery and consent management</li>
+<li>Unity Analytics 6.3.0 — optional gameplay analytics after explicit in-app opt-in</li>
 </ul>
 
 <h2>Changes</h2>
-<p>This policy will be updated before a release adds a materially different data-processing service or changes the advertising or analytics configuration.</p>
+<p>This policy will be updated before a release materially changes the app's data-processing, advertising, analytics, or purchase-provider configuration.</p>
 
 <h2>Support</h2>
-<p>For privacy or support questions, use the <a href="https://github.com/arifaydinkoca-hash/ArcanaSort-Support/issues">Arcana Sort support page</a>.</p>
+<p>For privacy, analytics-data deletion, or support questions, use the <a href="https://github.com/arifaydinkoca-hash/ArcanaSort-Support/issues">Arcana Sort support page</a>.</p>
 <p>Developer: Arif Aydın Koca</p>
 </body>
 </html>
